@@ -245,6 +245,29 @@ h4 {
   color: var(--primary);
 }
 
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: block;
+  }
+
+  .nav-actions {
+    margin-left: auto;   /* pushes actions to right */
+    gap: .6rem;
+  }
+
+}
+
 /* ============================================================
       BUTTONS
       ============================================================ */
