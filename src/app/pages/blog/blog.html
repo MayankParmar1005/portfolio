@@ -1,0 +1,109 @@
+<!-- ─── PAGE HEADER ─────────────────────────────────────── -->
+<div class="page-header">
+    <div class="container">
+      <div class="overline">Insights</div>
+      <h1 style="font-size:clamp(2rem,6vw,3.5rem);font-weight:900;letter-spacing:-.04em;margin-bottom:1rem;">The Blog</h1>
+      <p style="color:var(--text-muted);font-size:1.05rem;max-width:560px;margin:0 auto;line-height:1.7;">
+        Technical deep-dives, architecture lessons, and hard-won knowledge from years of shipping production software.
+      </p>
+    </div>
+  </div>
+
+  <!-- ─── BLOG LIST ────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="blog-list">
+
+        <!-- Post 1 -->
+        <article class="blog-card" data-postid="1">
+          <div class="blog-tags">
+            <span class="badge">TypeScript</span>
+            <span class="badge">tRPC</span>
+            <span class="badge">API Design</span>
+            <span class="badge">Backend</span>
+          </div>
+          <h2 class="blog-title">Why I Switched From REST to tRPC for My Last 5 Projects</h2>
+          <p class="blog-excerpt">After years of building REST APIs, I made the switch to tRPC for my TypeScript projects. Here's what I learned, what I gained, and the one scenario where REST still wins.</p>
+          <div class="blog-meta">
+            <div class="blog-meta-info">
+              <span>📅 March 2, 2026</span>
+              <span>🕐 5 min read</span>
+            </div>
+            <span class="read-more">Read More →</span>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="blog-card" data-postid="2">
+          <div class="blog-tags">
+            <span class="badge">Performance</span>
+            <span class="badge">Next.js</span>
+            <span class="badge">Web Vitals</span>
+            <span class="badge">Optimization</span>
+          </div>
+          <h2 class="blog-title">Building for Performance: How I Cut Load Times by 60%</h2>
+          <p class="blog-excerpt">A case study on performance optimization — from bundle splitting and image optimization to lazy loading and edge caching. The techniques that actually moved the needle.</p>
+          <div class="blog-meta">
+            <div class="blog-meta-info">
+              <span>📅 February 23, 2026</span>
+              <span>🕐 6 min read</span>
+            </div>
+            <span class="read-more">Read More →</span>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="blog-card" data-postid="3">
+          <div class="blog-tags">
+            <span class="badge">Architecture</span>
+            <span class="badge">Microservices</span>
+            <span class="badge">Go</span>
+            <span class="badge">Scaling</span>
+          </div>
+          <h2 class="blog-title">The Architecture Decision That Saved a $2M Project</h2>
+          <p class="blog-excerpt">When a client's startup was about to ship a monolith that would have collapsed under their projected growth, here's the conversation that changed the trajectory.</p>
+          <div class="blog-meta">
+            <div class="blog-meta-info">
+              <span>📅 February 16, 2026</span>
+              <span>🕐 7 min read</span>
+            </div>
+            <span class="read-more">Read More →</span>
+          </div>
+        </article>
+
+        <!-- Post 4 -->
+        <article class="blog-card" data-postid="4">
+          <div class="blog-tags">
+            <span class="badge">TypeScript</span>
+            <span class="badge">Patterns</span>
+            <span class="badge">Best Practices</span>
+          </div>
+          <h2 class="blog-title">10 TypeScript Patterns That Transformed My Codebase</h2>
+          <p class="blog-excerpt">After 5 years with TypeScript, these are the patterns I reach for again and again — from discriminated unions to template literal types and beyond.</p>
+          <div class="blog-meta">
+            <div class="blog-meta-info">
+              <span>📅 February 9, 2026</span>
+              <span>🕐 8 min read</span>
+            </div>
+            <span class="read-more">Read More →</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ARTICLE OVERLAY ──────────────────────────────────── -->
+  <div class="article-overlay" id="articleOverlay">
+    <div class="article-inner">
+      <button type="button" class="article-back" id="articleClose">← Back to Blog</button>
+
+      <div class="article-header">
+        <div class="blog-tags" id="articleTags"></div>
+        <h1 class="article-title" id="articleTitle"></h1>
+        <div class="article-meta" id="articleMeta"></div>
+      </div>
+
+      <div class="article-body" id="articleBody"></div>
+    </div>
+  </div>

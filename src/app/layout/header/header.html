@@ -1,0 +1,48 @@
+<!-- ─── NAVIGATION ─────────────────────────────────────── -->
+<nav class="nav">
+    <div class="container nav-inner">
+        <!-- <a routerLink="/" class="nav-logo">alex<span>.</span>dev</a> -->
+
+        <div class="logo">
+            <span class="dev">Dev</span><span class="name">Name</span><span class="dot">.</span>
+        </div>
+
+        <div class="nav-links">
+            @for (link of navLinks; track link.path) {
+            <a [routerLink]="link.path" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: link.path === '/'}">
+                {{ link.label }}
+            </a>
+            }
+        </div>
+
+        <div class="nav-actions">
+            <a routerLink="/contact" class="nav-cta">Hire Me</a>
+            <button type="button" class="nav-hamburger" (click)="toggleMenu()" aria-label="Toggle menu">
+                @if (!isMenuOpen) {
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+                } @else {
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+                }
+            </button>
+        </div>
+    </div>
+</nav>
+
+<div class="nav-mobile" [class.open]="isMenuOpen">
+    @for (link of navLinks; track link.path) {
+    <a [routerLink]="link.path" routerLinkActive="active" [routerLinkActiveOptions]="{exact: link.path === '/'}"
+        (click)="closeMenu()">
+        {{ link.label }}
+    </a>
+    }
+</div>
