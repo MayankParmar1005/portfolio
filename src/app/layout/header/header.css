@@ -92,22 +92,48 @@
     border-radius: 1rem;
     margin: -1rem auto 1.5rem;
 }
-
+  
+  
 .logo {
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-weight: 700;
-    font-family: "Segoe UI", sans-serif;
-    letter-spacing: -0.5px;
+    font-size: 1.2rem;
+}
+
+/* terminal icon box */
+.logo-icon{
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: rgba(0, 255, 200, 0.08);
+    border:1px solid rgba(0,255,200,0.3);
+    color:#22d3ee;
+    transition: all 0.3s ease;
   }
   
-  .dev {
-    color: #ffffff;
+  /* Hover effect */
+  .logo-icon:hover{
+    background:rgba(0,255,200,0.3);
+    /* background: oklch(var(--primary) / var(--tw-text-opacity, 1)); */
+    color:#22d3ee;
+    /* border-color:#22d3ee; */
+    /* border-color: rgba(0,255,200,0.3); */
   }
-  
-  .name {
-    color: #2dd4bf; /* teal highlight */
-  }
-  
-  .dot {
-    color: #9ca3af; /* muted gray */
-  }
+
+/* text styling */
+.dev {
+    color: #e5e7eb;
+}
+
+.name {
+    color: #22d3ee;
+}
+
+.dot {
+    color: #22d3ee;
+}
