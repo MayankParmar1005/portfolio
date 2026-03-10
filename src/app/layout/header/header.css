@@ -119,10 +119,7 @@
   /* Hover effect */
   .logo-icon:hover{
     background:rgba(0,255,200,0.3);
-    /* background: oklch(var(--primary) / var(--tw-text-opacity, 1)); */
     color:#22d3ee;
-    /* border-color:#22d3ee; */
-    /* border-color: rgba(0,255,200,0.3); */
   }
 
 /* text styling */
