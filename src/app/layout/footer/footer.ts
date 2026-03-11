@@ -34,12 +34,12 @@ export class Footer {
 
   quickLinks = [
     { path: '/', label: 'Home' },
-    { path: '/about', label: 'About Us' },
-    { path: '/services', label: 'Our Services' },
-    { path: '/portfolio', label: 'View Portfolio' },
-    { path: '/pricing', label: 'Pricing Plans' },
-    { path: '/blog', label: 'Latest Blog' },
-    { path: '/contact', label: 'Contact Us' },
+    { path: '/about', label: 'About' },
+    { path: '/services', label: 'Services' },
+    { path: '/portfolio', label: 'Portfolio' },
+    { path: '/pricing', label: 'Pricing' },
+    { path: '/blog', label: 'Blog' },
+    { path: '/contact', label: 'Contact' },
   ];
 
   services = [

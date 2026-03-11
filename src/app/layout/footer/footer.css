@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
     color: white;
@@ -150,4 +150,37 @@
 
 .footer-bottom-links a:hover {
     color: white;
+}
+
+/* terminal icon box */
+.logo-icon{
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: rgba(0, 255, 200, 0.08);
+    border:1px solid rgba(0,255,200,0.3);
+    color:#22d3ee;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .logo-icon:hover{
+    background:rgba(0,255,200,0.3);
+    color:#22d3ee;
+  }
+
+/* text styling */
+.dev {
+    color: #e5e7eb;
+}
+
+.name {
+    color: #22d3ee;
+}
+
+.dot {
+    color: #22d3ee;
 }
