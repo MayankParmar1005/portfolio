@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+    commands:
+      - npm ci
+
+  build:
+    commands:
+      - npx ng build --configuration production
+
+artifacts:
+  base-directory: dist/portfolio_gemini/browser
+  files:
+    - '**/*'
