@@ -3,15 +3,20 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 22
+      nodejs: 22 # Use the version matching your project
     commands:
-      - npm ci
-
+      - npm install
   build:
     commands:
-      - npx ng build --configuration production
+      - npm run build
+  post_build:
+    commands:
+      # Sync build folder to S3
+      - aws s3 sync dist/portfolio/browser/ s3://mayanksweb-site --delete
+      # Invalidate CloudFront cache so changes reflect immediately
+      - aws cloudfront create-invalidation --distribution-id E1YGUJE9SDOC74 --paths "/*"
 
 artifacts:
-  base-directory: dist/portfolio_gemini/browser
   files:
     - '**/*'
+  base-directory: 'dist/portfolio/browser' # Match your build output folder
