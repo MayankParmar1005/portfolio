@@ -24,61 +24,34 @@ export class PortfolioComponent {
   activeFilter = 'All';
   filters = ['All', 'Business', 'E-commerce', 'UI/UX'];
 
+  selectedProject: any = null;
+  isModalOpen = false;
+
   projects = [
     {
-      title: 'Restaurant Website',
+      title: 'The spice royale',
       category: 'Business',
-      description: 'Modern dining experience showcasing menu and ambiance.',
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800',
-      technologies: ['Angular', 'CSS', 'Lucide Icons'],
-      demoLink: '#',
-      githubLink: '#'
+      description: 'Elegant restaurant web app for The Royal Spice featuring menu browsing, table reservations, and a rich dining experience.',
+      image: 'assets/images/restaurantapp.png',
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'D3.js'],
     },
+
     {
-      title: 'Barber Shop Website',
+      title: 'The gentleman\'s cut',
       category: 'Business',
-      description: 'Premium grooming service booking and gallery.',
-      image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=800',
-      technologies: ['Angular', 'Responsive Design'],
-      demoLink: '#',
-      githubLink: '#'
+      description: 'Modern barber shop website with online booking, service listing, and a premium grooming experience.',
+      image: 'assets/images/barbershop.png',
+      technologies: ['React Native', 'TypeScript', 'Stripe'],
     },
+
     {
-      title: 'Saree E-commerce Website',
-      category: 'E-commerce',
-      description: 'Elegant ethnic wear collection with seamless e-commerce.',
-      image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=800',
-      technologies: ['Angular', 'Node.js', 'Stripe'],
-      demoLink: '#',
-      githubLink: '#'
-    },
-    {
-      title: 'AI Tool Website',
-      category: 'UI/UX',
-      description: 'Modern SaaS landing page for artificial intelligence tools.',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
-      technologies: ['Angular', 'Tailwind', 'Framer Motion'],
-      demoLink: '#',
-      githubLink: '#'
-    },
-    {
-      title: 'Corporate Business Website',
+      title: 'NexusAPI Platform',
       category: 'Business',
-      description: 'Professional corporate landing page for startups.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
-      technologies: ['Angular', 'REST API'],
-      demoLink: '#',
-      githubLink: '#'
+      description: 'High-throughput REST + GraphQL API infrastructure serving 50k+ daily requests with 99.9% uptime.',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=500&fit=crop',
+      technologies: ['Go', 'GraphQL', 'Redis', 'Docker'],
     },
-    {
-      title: 'Landing Page Design',
-      category: 'UI/UX',
-      description: 'High-converting landing page for marketing campaigns.',
-      image: 'https://images.unsplash.com/photo-1481487196290-c152efe083f5?auto=format&fit=crop&q=80&w=800',
-      technologies: ['HTML5', 'SASS', 'Animations'],
-      demoLink: '#',
-      githubLink: '#'
-    }
+    
   ];
 
   get filteredProjects() {
@@ -90,5 +63,15 @@ export class PortfolioComponent {
 
   setFilter(filter: string) {
     this.activeFilter = filter;
+  }
+
+  openModal(project: any) {
+    console.log('Clicked:', project); // 👈 check this
+    this.selectedProject = project;
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
   }
 }
