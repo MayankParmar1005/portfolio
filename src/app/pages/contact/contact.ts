@@ -43,7 +43,7 @@ export class ContactComponent {
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
       subject: ['', [Validators.required]],
-      message: ['', [Validators.required, Validators.minLength(10)]]
+      message: ['', [Validators.required]]
     });
   }
 
@@ -60,7 +60,11 @@ export class ContactComponent {
   // }
 
   onSubmit() {
+    alert('button clicked')
+    console.log(this.contactForm.value);
+    console.log(this.contactForm.valid);
     if (this.contactForm.valid) {
+      alert('valid')
       this.isSubmitting = true;
 
       console.log(this.contactForm.value);
