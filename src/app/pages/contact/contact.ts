@@ -65,7 +65,7 @@ export class ContactComponent {
 
       console.log(this.contactForm.value);
       
-      this.http.post('http://localhost:3000/send-email', this.contactForm.value)
+      this.http.post('http://13.233.116.31:3000/send-email', this.contactForm.value)
         .subscribe({
           next: (res) => {
             this.showSuccess = true;
