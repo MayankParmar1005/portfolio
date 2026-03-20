@@ -47,30 +47,15 @@ export class ContactComponent {
     });
   }
 
-  // onSubmit() {
-  //   if (this.contactForm.valid) {
-  //     this.submitted = true;
-  //     console.log('Form Submitted', this.contactForm.value);
-  //     // Reset form after 3 seconds
-  //     setTimeout(() => {
-  //       this.submitted = false;
-  //       this.contactForm.reset();
-  //     }, 3000);
-  //   }
-  // }
 
   onSubmit() {
-    alert('button clicked')
-    console.log(this.contactForm.value);
-    console.log(this.contactForm.valid);
     if (this.contactForm.valid) {
-      alert('valid')
       this.isSubmitting = true;
 
       console.log(this.contactForm.value);
 
-      const HTTP = "http://13.233.116.31:3000";
-      const HTTPS = "https://api.mayanksweb.online";
+      const HTTP = "http://localhost:3000"; // for local
+      const HTTPS = "https://api.mayanksweb.online"; // for online
       
       
       this.http.post(`${HTTPS}/send-email`, this.contactForm.value)
