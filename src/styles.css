@@ -1699,7 +1699,7 @@ h4 {
   font-size: .75rem;
   color: var(--destructive);
   margin-top: .3rem;
-  display: none;
+  /* display: none; */
 }
 
 .form-success {
