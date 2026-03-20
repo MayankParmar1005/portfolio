@@ -68,10 +68,8 @@ export class ContactComponent {
       this.isSubmitting = true;
 
       console.log(this.contactForm.value);
-
-      const API_URL = 'http://api.mayanksweb.online'
       
-      this.http.post(`${API_URL}/send-email`, this.contactForm.value)
+      this.http.post('http://13.233.116.31:3000/send-email', this.contactForm.value)
         .subscribe({
           next: (res) => {
             this.showSuccess = true;
