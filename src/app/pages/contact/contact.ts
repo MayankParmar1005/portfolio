@@ -68,8 +68,12 @@ export class ContactComponent {
       this.isSubmitting = true;
 
       console.log(this.contactForm.value);
+
+      const HTTP = "http://13.233.116.31:3000";
+      const HTTPS = "https://api.mayanksweb.online";
       
-      this.http.post('http://13.233.116.31:3000/send-email', this.contactForm.value)
+      
+      this.http.post(`${HTTPS}/send-email`, this.contactForm.value)
         .subscribe({
           next: (res) => {
             this.showSuccess = true;
