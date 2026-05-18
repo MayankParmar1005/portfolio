@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import {
   LucideAngularModule,
   Monitor,
@@ -16,7 +17,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [CommonModule, LucideAngularModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive, LucideAngularModule],
   templateUrl: './services.html',
   styleUrl: './services.css',
 })
