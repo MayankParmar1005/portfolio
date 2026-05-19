@@ -59,43 +59,13 @@
     </div>
   </section>
 
-  <!-- ─── PROJECT DETAIL MODAL ────────────────────────────── -->
-  <!-- <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-box">
-      <button type="button" class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
-      <img src="" alt="" id="modalImg" class="modal-img" />
-      <div class="modal-body">
-        <h2 class="modal-title" id="modalTitle"></h2>
-        <p class="modal-desc" id="modalDesc"></p>
-        <div class="modal-tech-label">Tech Stack</div>
-        <div class="modal-tech-tags" id="modalTech"></div>
-        <div class="modal-actions">
-          <a href="#" class="btn btn-primary btn-sm" id="modalLive">⬡ View Live</a>
-          <a href="#" class="btn btn-outline btn-sm" id="modalRepo">⌥ Source Code</a>
-        </div>
-      </div>
-    </div>
-  </div> -->
+  
 
   <div class="modal-overlay" *ngIf="isModalOpen">
-
-    <div >
+  
+    <div>
       <button class="modal-close" (click)="closeModal()">✕</button>
-  
       <img [src]="selectedProject?.image" class="modal-img" />
-  
-      <!-- <div class="modal-body">
-        <h2>{{ selectedProject?.title }}</h2>
-        <p>{{ selectedProject?.description }}</p>
-  
-        <div class="modal-tech-tags">
-          <span class="badge"
-                *ngFor="let tech of selectedProject?.technologies">
-            {{ tech }}
-          </span>
-        </div>
-      </div> -->
-  
     </div>
   
   </div>

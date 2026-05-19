@@ -61,6 +61,9 @@ export class HomeComponent implements AfterViewInit {
   readonly Star = Star;
   readonly Quote = Quote;
 
+  selectedProject: any = null;
+  isModalOpen = false;
+
   services = [
     { title: 'Business Website', description: 'Websites for local businesses like salons, restaurants, shops.', icon: Monitor },
     { title: 'E-commerce Website', description: 'Online store with product management and payment integration.', icon: ShoppingCart },
@@ -88,4 +91,43 @@ export class HomeComponent implements AfterViewInit {
     { number: 4, title: 'Client Review', description: 'Sharing the draft for feedback and improvements.' },
     { number: 5, title: 'Website Launch', description: 'Going live and optimizing for search engines.' },
   ];
+
+
+
+  projects = [
+    {
+      title: 'The spice royale',
+      category: 'Business',
+      description: 'Elegant restaurant web app for The Royal Spice featuring menu browsing, table reservations, and a rich dining experience.',
+      image: 'assets/images/restaurantapp.png',
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'D3.js'],
+    },
+
+    {
+      title: 'The gentleman\'s cut',
+      category: 'Business',
+      description: 'Modern barber shop website with online booking, service listing, and a premium grooming experience.',
+      image: 'assets/images/barbershop.png',
+      technologies: ['React Native', 'TypeScript', 'Stripe'],
+    },
+
+    {
+      title: 'Dent Care',
+      category: 'Business',
+      description: 'Professional dental care platform featuring smile treatments, doctor profiles, appointment scheduling, and trusted oral healthcare solutions.',
+      image: 'assets/images/dent-care.png',
+      technologies: ['React Native', 'TypeScript', 'Stripe'],
+    },
+    
+  ];
+
+  openModal(project: any) {
+    console.log('Clicked:', project); // 👈 check this
+    this.selectedProject = project;
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
 }

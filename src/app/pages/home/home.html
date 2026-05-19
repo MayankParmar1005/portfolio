@@ -35,36 +35,26 @@
     <span class="marquee-item"><span>✦</span> React</span>
     <span class="marquee-item"><span>✦</span> TypeScript</span>
     <span class="marquee-item"><span>✦</span> Node.js</span>
-    <span class="marquee-item"><span>✦</span> Python</span>
     <span class="marquee-item"><span>✦</span> PostgreSQL</span>
-    <span class="marquee-item"><span>✦</span> GraphQL</span>
-    <span class="marquee-item"><span>✦</span> Next.js</span>
     <span class="marquee-item"><span>✦</span> Docker</span>
     <span class="marquee-item"><span>✦</span> AWS</span>
-    <span class="marquee-item"><span>✦</span> Tailwind CSS</span>
-    <span class="marquee-item"><span>✦</span> Rust</span>
-    <span class="marquee-item"><span>✦</span> Go</span>
     <span class="marquee-item"><span>✦</span> React Native</span>
-    <span class="marquee-item"><span>✦</span> MongoDB</span>
-    <span class="marquee-item"><span>✦</span> Redis</span>
-    <span class="marquee-item"><span>✦</span> Kubernetes</span>
-    <!-- duplicate for seamless loop -->
+
     <span class="marquee-item"><span>✦</span> React</span>
     <span class="marquee-item"><span>✦</span> TypeScript</span>
     <span class="marquee-item"><span>✦</span> Node.js</span>
-    <span class="marquee-item"><span>✦</span> Python</span>
     <span class="marquee-item"><span>✦</span> PostgreSQL</span>
-    <span class="marquee-item"><span>✦</span> GraphQL</span>
-    <span class="marquee-item"><span>✦</span> Next.js</span>
     <span class="marquee-item"><span>✦</span> Docker</span>
     <span class="marquee-item"><span>✦</span> AWS</span>
-    <span class="marquee-item"><span>✦</span> Tailwind CSS</span>
-    <span class="marquee-item"><span>✦</span> Rust</span>
-    <span class="marquee-item"><span>✦</span> Go</span>
     <span class="marquee-item"><span>✦</span> React Native</span>
-    <span class="marquee-item"><span>✦</span> MongoDB</span>
-    <span class="marquee-item"><span>✦</span> Redis</span>
-    <span class="marquee-item"><span>✦</span> Kubernetes</span>
+
+    <span class="marquee-item"><span>✦</span> React</span>
+    <span class="marquee-item"><span>✦</span> TypeScript</span>
+    <span class="marquee-item"><span>✦</span> Node.js</span>
+    <span class="marquee-item"><span>✦</span> PostgreSQL</span>
+    <span class="marquee-item"><span>✦</span> Docker</span>
+    <span class="marquee-item"><span>✦</span> AWS</span>
+    <span class="marquee-item"><span>✦</span> React Native</span>
   </div>
 </div>
 
@@ -77,74 +67,35 @@
     </div>
 
     <div class="projects-grid">
-      <!-- Card 1 -->
-      <div class="project-card">
+      
+      <!-- Project 1 -->
+      <div class="project-card" *ngFor="let project of projects" (click)="openModal(project)">
+        
         <div class="project-img-wrap">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop"
-            alt="AnalyticsPro Dashboard" class="project-img" loading="lazy" />
+          <img [src]="project.image" [alt]="project.title" class="project-img" loading="lazy" />
+      
+          <!-- <div style="position:absolute;top:.75rem;right:.75rem;z-index:2;">
+            <span class="badge">{{ project.category }}</span>
+          </div> -->
         </div>
+      
         <div class="project-body">
-          <h3 class="project-title">AnalyticsPro Dashboard</h3>
-          <p class="project-desc">Real-time SaaS analytics platform with custom charting, team dashboards, and automated
-            reporting.</p>
+          <h3 class="project-title">{{ project.title }}</h3>
+      
+          <p class="project-desc">
+            {{ project.description }}
+          </p>
+      
           <div class="project-tags">
-            <span class="badge">React</span>
-            <span class="badge">Node.js</span>
-            <span class="badge">PostgreSQL</span>
-            <span class="badge">D3.js</span>
+            <span class="badge" *ngFor="let tech of project.technologies">
+              {{ tech }}
+            </span>
           </div>
-          <div class="project-links">
-            <a href="#" class="live">⬡ Live</a>
-            <a href="#" class="repo">⌥ Code</a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Card 2 -->
-      <div class="project-card">
-        <div class="project-img-wrap">
-          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop"
-            alt="ShopMobile Commerce" class="project-img" loading="lazy" />
         </div>
-        <div class="project-body">
-          <h3 class="project-title">ShopMobile Commerce</h3>
-          <p class="project-desc">Native-feel e-commerce app with seamless checkout, inventory management, and push
-            notifications.</p>
-          <div class="project-tags">
-            <span class="badge">React Native</span>
-            <span class="badge">TypeScript</span>
-            <span class="badge">Stripe</span>
-            <span class="badge">Firebase</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="live">⬡ Live</a>
-            <a href="#" class="repo">⌥ Code</a>
-          </div>
-        </div>
+      
       </div>
-
-      <!-- Card 3 -->
-      <div class="project-card">
-        <div class="project-img-wrap">
-          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=500&fit=crop"
-            alt="NexusAPI Platform" class="project-img" loading="lazy" />
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">NexusAPI Platform</h3>
-          <p class="project-desc">High-throughput REST + GraphQL API infrastructure serving 50k+ daily requests with
-            99.9% uptime.</p>
-          <div class="project-tags">
-            <span class="badge">Go</span>
-            <span class="badge">GraphQL</span>
-            <span class="badge">Redis</span>
-            <span class="badge">Docker</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="live">⬡ Live</a>
-            <a href="#" class="repo">⌥ Code</a>
-          </div>
-        </div>
-      </div>
+      
     </div>
 
     <div style="text-align:center;margin-top:2.5rem;">
@@ -152,6 +103,19 @@
     </div>
   </div>
 </section>
+
+<div class="modal-overlay" *ngIf="isModalOpen">
+
+  <div >
+    <button class="modal-close" (click)="closeModal()">✕</button>
+
+    <img [src]="selectedProject?.image" class="modal-img" />
+
+    
+
+  </div>
+
+</div>
 
 <!-- ─── SERVICES PREVIEW ─────────────────────────────────── -->
 <section class="section bg-surface reveal-hidden">

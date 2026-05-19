@@ -45,11 +45,11 @@ export class PortfolioComponent {
     },
 
     {
-      title: 'NexusAPI Platform',
+      title: 'Dent Care',
       category: 'Business',
-      description: 'High-throughput REST + GraphQL API infrastructure serving 50k+ daily requests with 99.9% uptime.',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=500&fit=crop',
-      technologies: ['Go', 'GraphQL', 'Redis', 'Docker'],
+      description: 'Professional dental care platform featuring smile treatments, doctor profiles, appointment scheduling, and trusted oral healthcare solutions.',
+      image: 'assets/images/dent-care.png',
+      technologies: ['React Native', 'TypeScript', 'Stripe'],
     },
     
   ];
