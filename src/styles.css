@@ -1,9 +1,4 @@
 /* ============================================================
-   FONTS — loaded from Google Fonts
-   ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800;900&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
-
-/* ============================================================
       RESET & BASE
       ============================================================ */
 *,
@@ -39,7 +34,7 @@ html {
 }
 
 body {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Sora', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--bg);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
@@ -64,18 +59,18 @@ ul {
       TYPOGRAPHY
       ============================================================ */
 .font-display {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: 'Bricolage Grotesque', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .font-mono {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: 'Bricolage Grotesque', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.1;
 }
 
@@ -2054,30 +2049,6 @@ h4 {
 /* Glow text effect */
 .text-glow {
   text-shadow: 0 0 40px oklch(0.78 0.18 195 / 0.6);
-}
-
-@font-face {
-  font-family: "Bricolage Grotesque";
-  src: url("/assets/fonts/BricolageGrotesque-Variable.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sora";
-  src: url("/assets/fonts/Sora-Variable.woff2") format("woff2");
-  font-weight: 100 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/assets/fonts/JetBrainsMono-Variable.woff2") format("woff2");
-  font-weight: 100 800;
-  font-style: normal;
-  font-display: swap;
 }
 
 /* ============================================================

@@ -8,6 +8,7 @@ import { BlogComponent } from './pages/blog/blog';
 import { ContactComponent } from './pages/contact/contact';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy';
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions';
+import { NotFoundComponent } from './pages/not-found/not-found';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -19,5 +20,5 @@ export const routes: Routes = [
     { path: 'contact', component: ContactComponent },
     { path: 'privacy-policy', component: PrivacyPolicyComponent },
     { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
-    { path: '**', redirectTo: '' }
+    { path: '**', component: NotFoundComponent }
 ];
