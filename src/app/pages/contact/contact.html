@@ -111,6 +111,7 @@
               <div class="form-group">
                 <label class="form-label" for="message">Message <span class="req">*</span></label>
                 <textarea formControlName="message" class="form-textarea" rows="5" placeholder="Tell me about your project..." maxlength="2000"></textarea>
+                <div class="form-counter">{{ messageLength }}/2000</div>
                 <div class="form-error" *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid">
                   Message must be at least 20 characters
                 </div>

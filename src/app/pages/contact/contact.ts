@@ -43,7 +43,7 @@ export class ContactComponent {
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
       subject: ['', [Validators.required]],
-      message: ['', [Validators.required]]
+      message: ['', [Validators.required, Validators.minLength(20)]]
     });
   }
 
@@ -80,5 +80,9 @@ export class ContactComponent {
   resetForm() {
     this.showSuccess = false;
     this.contactForm.reset();
+  }
+
+  get messageLength(): number {
+    return this.contactForm.get('message')?.value?.length ?? 0;
   }
 }
