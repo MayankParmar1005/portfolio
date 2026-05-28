@@ -1,0 +1,43 @@
+<div class="page-header">
+  <div class="container">
+    <div class="overline">Legal</div>
+    <h1 class="hero-title" style="font-size:clamp(2rem,6vw,3.5rem);font-weight:900;letter-spacing:-.04em;margin-bottom:1rem;">
+      Terms and <span class="gradient-text">Conditions</span>
+    </h1>
+    <p class="hero-text" style="color:var(--text-muted);font-size:1.05rem;max-width:700px;margin:0 auto;line-height:1.7;">
+      Last Updated: May 26, 2026
+    </p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="card legal-intro">
+      <h2>Welcome to Mayank's Web Portfolio</h2>
+      <p>
+        By accessing and using this website, you agree to the following terms and conditions.
+      </p>
+    </div>
+
+    <div class="legal-grid">
+      @for (section of sections; track section.title) {
+      <article class="card legal-card">
+        <h2>{{ section.title }}</h2>
+        <p>{{ section.body }}</p>
+      </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section-sm bg-surface">
+  <div class="container">
+    <div class="card legal-callout">
+      <div class="overline">Contact</div>
+      <h2>Questions?</h2>
+      <p>
+        For any questions regarding these terms, please contact through the website contact section.
+      </p>
+    </div>
+  </div>
+</section>

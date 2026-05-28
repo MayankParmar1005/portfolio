@@ -48,4 +48,9 @@ export class Footer {
     { path: '/services', label: 'Website Redesign' },
     { path: '/services', label: 'Maintenance' },
   ];
+
+  legalLinks = [
+    { path: '/privacy-policy', label: 'Privacy Policy' },
+    { path: '/terms-and-conditions', label: 'Terms & Conditions' },
+  ];
 }

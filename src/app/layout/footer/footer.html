@@ -66,8 +66,9 @@
         <div class="container footer-bottom-content">
             <p>&copy; {{ currentYear }} mayanksWeb. All rights reserved.</p>
             <div class="footer-bottom-links">
-                <!-- <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a> -->
+                @for (link of legalLinks; track link.path) {
+                <a [routerLink]="link.path">{{ link.label }}</a>
+                }
             </div>
         </div>
     </div>
