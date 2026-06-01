@@ -28,7 +28,8 @@
       <div class="projects-grid" id="projectsGrid">
 
         <!-- Project 1 -->
-        <div class="project-card" *ngFor="let project of projects" (click)="openModal(project)">
+        <!-- <div class="project-card" *ngFor="let project of projects" (click)="openModal(project)"> -->
+        <div class="project-card" *ngFor="let project of projects" (click)="openProject(project)">
         
           <div class="project-img-wrap">
             <img [src]="project.image" [alt]="project.title" class="project-img" loading="lazy" />
