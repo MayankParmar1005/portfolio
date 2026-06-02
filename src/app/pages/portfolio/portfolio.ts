@@ -34,7 +34,8 @@ export class PortfolioComponent {
       description: 'Elegant restaurant web app for The Royal Spice featuring menu browsing, table reservations, and a rich dining experience.',
       image: 'assets/images/restaurantapp.png',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'D3.js'],
-      url: 'https://restaurant-demo-2026.netlify.app/'
+      // url: 'https://restaurant-demo-2026.netlify.app/',
+      url: 'https://restaurant-delta-gold.vercel.app/'
     },
 
     {
@@ -43,7 +44,8 @@ export class PortfolioComponent {
       description: 'Modern barber shop website with online booking, service listing, and a premium grooming experience.',
       image: 'assets/images/barbershop.png',
       technologies: ['React Native', 'TypeScript', 'Stripe'],
-      url: 'https://thegentlemanssalon.netlify.app/'
+      // url: 'https://thegentlemanssalon.netlify.app/',
+      url: 'https://the-gentleman-s-cut-frontend.vercel.app/'
     },
 
     {
@@ -52,7 +54,8 @@ export class PortfolioComponent {
       description: 'Professional dental care platform featuring smile treatments, doctor profiles, appointment scheduling, and trusted oral healthcare solutions.',
       image: 'assets/images/dent-care.png',
       technologies: ['React Native', 'TypeScript', 'Stripe'],
-      url:'https://thedentcare.netlify.app/'
+      // url:'https://thedentcare.netlify.app/',
+      url: 'https://dent-care-frontend.vercel.app/'
     },
     
   ];
